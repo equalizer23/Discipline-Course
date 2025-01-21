@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Discipline-Course</string>
+    <string name="chart_icon_description">Chart icon</string>
+    <string name="settings_description">Settings Icon</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="create_habit_button">Create habit button</string>
+    <string name="flame_icon_description">Flame Icon</string>
+    <string name="complete_habit_icon">Complete Habit Icon</string>
 </resources>
