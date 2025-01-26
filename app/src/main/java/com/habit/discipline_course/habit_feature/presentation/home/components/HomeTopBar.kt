@@ -2,6 +2,9 @@ package com.habit.discipline_course.habit_feature.presentation.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -11,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -26,11 +30,12 @@ fun HomeTopBar(
     onSettingsClick: () -> Unit
 ) {
     TopAppBar(
+        modifier = Modifier.padding(top = WindowInsets.systemBars.asPaddingValues().calculateTopPadding()),
         title = {
             Text(text = title, color = MaterialTheme.colorScheme.secondary, fontSize = 24.sp)
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
-        windowInsets = WindowInsets(top = 10.dp),
+        windowInsets = WindowInsets(top = 5.dp),
         actions = {
             IconButton(
                 onClick = { onStatsClick() }

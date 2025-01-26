@@ -6,4 +6,9 @@
     <string name="create_habit_button">Create habit button</string>
     <string name="flame_icon_description">Flame Icon</string>
     <string name="complete_habit_icon">Complete Habit Icon</string>
+    <string name="back_icon_description">Back Icon</string>
+    <string name="create_habit_title">Create your habit</string>
+    <string name="habit_title_text_field_label">Title</string>
+    <string name="habit_description_text_field_label">Description</string>
+    <string name="create_habit_button_text">Create</string>
 </resources>

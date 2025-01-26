@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.habit.discipline_course.habit_feature.presentation.create_habit.CreateHabitScreen
 import com.habit.discipline_course.habit_feature.presentation.home.HomeScreen
 
 @Composable
@@ -23,7 +24,9 @@ fun NavigationRoot() {
 
         composable<Routes.Home>{
             HomeScreen(
-                onFabClick = {},
+                onFabClick = {
+                    navController.navigate(Routes.CreateHabit)
+                },
                 onSettingsClick = {},
                 onHabitClick = {}
             )
@@ -42,7 +45,7 @@ fun NavigationRoot() {
         }
 
         composable<Routes.CreateHabit>{
-            Box(modifier = Modifier.fillMaxSize()){  }
+            CreateHabitScreen(onBackClick = { navController.popBackStack() })
         }
     }
 }
