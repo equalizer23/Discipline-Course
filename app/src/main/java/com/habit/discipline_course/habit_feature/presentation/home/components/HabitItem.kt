@@ -36,7 +36,7 @@ fun HabitItem(
     modifier: Modifier = Modifier,
     title: String,
     description: String,
-    onHabitClick: () -> Unit,
+    onHabitClick: (String) -> Unit,
     onReset: () -> Unit
 ) {
     Row(
@@ -45,7 +45,7 @@ fun HabitItem(
     ){
         Card(
             modifier = Modifier.weight(0.8f),
-            onClick = { onHabitClick() },
+            onClick = { onHabitClick("uvywv") },
             shape = RoundedCornerShape(8.dp),
             border = BorderStroke(width = 1.dp, color = MaterialTheme.colorScheme.primary),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),

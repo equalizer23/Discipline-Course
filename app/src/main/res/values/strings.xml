@@ -11,4 +11,10 @@
     <string name="habit_title_text_field_label">Title</string>
     <string name="habit_description_text_field_label">Description</string>
     <string name="create_habit_button_text">Create</string>
+    <string name="habit_details_title">Details</string>
+    <string name="update_habit_button_text">Update</string>
+    <string name="habit_details_statistics_text">Stats</string>
+    <string name="current_streak_text">"Current streak: "</string>
+    <string name="longest_streak_text">"Longest streak: "</string>
+    <string name="delete_habit_text">Delete</string>
 </resources>

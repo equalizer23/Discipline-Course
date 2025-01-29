@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.habit.discipline_course.habit_feature.presentation.create_habit.CreateHabitScreen
+import com.habit.discipline_course.habit_feature.presentation.habit_details.HabitDetailsScreen
 import com.habit.discipline_course.habit_feature.presentation.home.HomeScreen
 
 @Composable
@@ -28,12 +29,14 @@ fun NavigationRoot() {
                     navController.navigate(Routes.CreateHabit)
                 },
                 onSettingsClick = {},
-                onHabitClick = {}
+                onHabitClick = { habitId ->
+                    navController.navigate(Routes.HabitDetails(habitId = habitId))
+                }
             )
         }
 
         composable<Routes.HabitDetails>{
-            Box(modifier = Modifier.fillMaxSize()){  }
+            HabitDetailsScreen(onBackClick = { navController.popBackStack() })
         }
 
         composable<Routes.Settings>{

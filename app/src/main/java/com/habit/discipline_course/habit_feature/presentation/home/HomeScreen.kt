@@ -27,7 +27,7 @@ import com.habit.discipline_course.habit_feature.presentation.home.components.Ha
 @Composable
 fun HomeScreen(
     onFabClick: () -> Unit,
-    onHabitClick: () -> Unit,
+    onHabitClick: (String) -> Unit,
     onSettingsClick: () -> Unit
 ) {
     Scaffold(
@@ -69,7 +69,7 @@ fun HomeScreen(
                         title = "Create a presentation",
                         description = "I need to do it today",
                         onReset = {},
-                        onHabitClick = { onHabitClick() }
+                        onHabitClick = { habitId -> onHabitClick(habitId) }
                     )
                 }
             }
