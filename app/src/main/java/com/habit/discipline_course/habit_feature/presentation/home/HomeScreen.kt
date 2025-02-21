@@ -16,6 +16,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -23,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.habit.discipline_course.habit_feature.presentation.home.components.HomeTopBar
 import com.habit.discipline_course.R
 import com.habit.discipline_course.habit_feature.presentation.home.components.HabitItem
+import com.habit.discipline_course.habit_feature.presentation.home.components.StatsBottomDrawer
 
 @Composable
 fun HomeScreen(
@@ -30,11 +35,14 @@ fun HomeScreen(
     onHabitClick: (String) -> Unit,
     onSettingsClick: () -> Unit
 ) {
+
+    var isDrawerVisible by remember { mutableStateOf(false) }
+
     Scaffold(
         topBar = {
             HomeTopBar(
                 title = stringResource(R.string.welcome_back),
-                onStatsClick = {},
+                onStatsClick = { isDrawerVisible = true },
                 onSettingsClick = onSettingsClick
             )
         },
@@ -60,6 +68,11 @@ fun HomeScreen(
                 .padding(vertical = 20.dp, horizontal = 10.dp)
                 .padding(bottom = WindowInsets.systemBars.asPaddingValues().calculateBottomPadding())
         ){
+
+            if(isDrawerVisible){
+                StatsBottomDrawer(onDismiss = { isDrawerVisible = false })
+            }
+
             LazyColumn(
                 modifier = Modifier.align(Alignment.Center)
             ){

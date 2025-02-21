@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Discipline-Course</string>
+    <string name="app_name">Discipline</string>
     <string name="chart_icon_description">Chart icon</string>
     <string name="settings_description">Settings Icon</string>
     <string name="welcome_back">Welcome back</string>
@@ -17,4 +17,9 @@
     <string name="current_streak_text">"Current streak: "</string>
     <string name="longest_streak_text">"Longest streak: "</string>
     <string name="delete_habit_text">Delete</string>
+    <string name="settings_topbar_title">Settings</string>
+    <string name="notification_settings_topbar_title">Notification settings</string>
+    <string name="notification_message">Notification message</string>
+    <string name="schedule_notification_button_text">Schedule</string>
+    <string name="statistics">Statistics</string>
 </resources>

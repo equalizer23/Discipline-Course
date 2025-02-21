@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.habit.discipline_course.core.presentation.DisciplineTopBar
 import com.habit.discipline_course.R
 import com.habit.discipline_course.core.presentation.HabitTextField
+import com.habit.discipline_course.habit_feature.presentation.habit_details.components.CalendarStats
 import com.habit.discipline_course.habit_feature.presentation.habit_details.components.StreakSection
 
 @Composable
@@ -90,6 +91,10 @@ fun HabitDetailsScreen(
                         fontWeight = FontWeight.Bold,
                     )
 
+                    Spacer(modifier = Modifier.height(20.dp))
+
+                    CalendarStats()
+
                     Spacer(modifier = Modifier.height(30.dp))
 
                     Column(
@@ -112,6 +117,8 @@ fun HabitDetailsScreen(
                                 color = MaterialTheme.colorScheme.secondary
                             )
                         }
+
+                        Spacer(modifier = Modifier.height(30.dp))
                     }
                 }
             }
